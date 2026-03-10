@@ -38,7 +38,7 @@ CHANNEL_URL          = os.getenv("CHANNEL_URL", "")          # https://t.me/mych
 # ID канала извлекаем из CHANNEL_URL: https://t.me/mychannel -> @mychannel
 CHANNEL = "@" + CHANNEL_URL.rstrip("/").split("/")[-1] if CHANNEL_URL else ""
 
-MODEL         = "qwen2.5:0.5b"
+MODEL         = os.getenv("OLLAMA_MODEL", "gemma3")
 HISTORY_LIMIT = 50
 HISTORY_PATH  = "sent_posts.log"  # путь к файлу внутри GitHub-репозитория
 
